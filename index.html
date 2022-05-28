@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>pagina de sorteio</title>
+    <script>
+        // sorteio por numeros
+        function sortear() {
+            let numPessoas = document.getElementById("inputNumero").value;
+            let numSorteado = Math.round(Math.random() * numPessoas);
+            document.getElementById("dispNum").innerHTML = numSorteado;
+
+            let p = document.getElementById("hist");
+            p.innerHTML += numSorteado + "; ";
+            mudarCor();
+        }
+        function mudarCor() {
+            let h = document.getElementById("dispNum");
+            h.style.color = "#ee8f58";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bolinhas">
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:17"></span>
+            <span style="--i:13"></span>
+            <span style="--i:28"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:17"></span>
+            <span style="--i:13"></span>
+            <span style="--i:28"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+        </div>
+    </div>
+    <div id="areaSorteio">
+        <!-- página para sorteio -->
+        <h1>PAGINA DE SORTEIO</h1>
+        <input id="inputNumero" type="number" placeholder="Dig. Maior Numero">
+        <h2 id="dispNum">Sorteio!</h2>
+        <button onclick="sortear()">SORTEAR</button>
+        <div id="detalamento">
+            <p id="hist"></p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+body {
+    background: #181b1d;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bolinhas {
+    position: relative;
+    display: flex;
+}
+
+.bolinhas span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+        0 0 50px #4fc3dc,
+        0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bolinhas span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+        0 0 50px #ff2d75,
+        0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+    100% {
+        transform: translateY(110vh) scale(1);
+    }
+
+    0% {
+        transform: translateY(-10vh) scale(0);
+    }
+}
+
+#areaSorteio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #4fc3dc;
+    font-family: 'Concert One', cursive;
+    margin-bottom: 45px;
+    font-size: 2.5rem;
+}
+
+input {
+    display: flex;
+    margin: auto;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 10px;
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: #e3e4e6;
+    background-color: #444;
+    font-family: 'Roboto Mono', monospace;
+}
+
+input::placeholder {
+    color: #e3e4e6;
+}
+
+h2 {
+    text-align: center;
+    background-color: #444;
+    color: #e3e4e6;
+    margin: auto;
+    width: 300px;
+    height: 45px;
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 1000;
+}
+
+button {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    padding: 25px 70px 40px 70px;
+    /* padding-bottom: 40px; */
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    background: #3b999b;
+    color: #e3e4e6;
+    font-family: 'Concert One', cursive;
+}
+
+button:hover {
+    background-color: #154B52;
+    color: #e3e4e6;
+    transition: 0.5s;
+}
+
+button:active {
+    background-color: #ee8f58;
+}
+
+#detalamento {
+    border: 3px solid #fff;
+    border-radius: 10px;
+    width: 60%;
+    /* height: 250px; */
+    margin: auto;
+    color: #ee8f58;
+    padding: 15px;
+    font-size: 1.5rem;
+    /* text-align: center; */
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 1000;
+}
