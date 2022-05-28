@@ -132,3 +132,19 @@ button:active {
     font-family: 'Roboto Mono', monospace;
     font-weight: 1000;
 }
+
+#rodape p {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 150px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+}
+
+#rodape a {
+    text-decoration: none;
+    color: #4fc3dc;
+}
